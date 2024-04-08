@@ -1,0 +1,8 @@
+def loop_size(node):
+    i = 1
+    while not isinstance(node.next, int):
+        a = node.next
+        node.next = i
+        node = a
+        i += 1
+    return i - node.next
